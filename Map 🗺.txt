@@ -60,15 +60,7 @@ editTextLong = findViewById(R.id.editTextong);
 
 latLng = new LatLng(-34, 151);
 }
-/**
-* Manipulates the map once available.
-* This callback is triggered when the map is ready to be used.
-* This is where we can add markers or lines, add listeners or move the camera. In this case,
-* we just add a marker near Sydney, Australia.
-* If Google Play services is not installed on the device, the user will be prompted to install
-* it inside the SupportMapFragment. This method will only be triggered once the user has
-* installed Google Play services and returned to the app.
-*/
+
 @Override
 public void onMapReady(GoogleMap googleMap) {
 mMap = googleMap;
@@ -172,11 +164,6 @@ XML
 mlns:android=”http://schemas.android.com/apk/res/android&#8221;
 package=”com.example.myyoutubelocationapp”>
 
-<!–
-The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-Google Maps Android API v2, but you must specify either coarse or fine
-location permissions for the ‘MyLocation’ functionality.
-–>
 <uses-permission android:name=”android.permission.ACCESS_FINE_LOCATION” />
 <uses-permission android:name=”android.permission.ACCESS_COARSE_LOCATION”/>
 <uses-permission android:name=”android.permission.INTERNET”/>
@@ -189,15 +176,8 @@ android:label=”@string/app_name”
 android:roundIcon=”@mipmap/ic_launcher_round”
 android:supportsRtl=”true”
 android:theme=”@style/AppTheme”>
+ define the keys for the debug and release targets in src/debug/ and src/release/.
 
-<!–
-The API key for Google Maps-based APIs is defined as a string resource.
-(See the file “res/values/google_maps_api.xml”).
-Note that the API key is linked to the encryption key used to sign the APK.
-You need a different API key for each encryption key, including the release key that is used to
-sign the APK for publishing.
-You can define the keys for the debug and release targets in src/debug/ and src/release/.
-–>
 <meta-data
 android:name=”com.google.android.geo.API_KEY”
 android:value=”@string/google_maps_key” />
